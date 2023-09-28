@@ -1,0 +1,6 @@
+div#demo {
+    color: brown;
+}
+:host {
+    background-color: yellow;
+}
