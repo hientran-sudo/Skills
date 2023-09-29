@@ -20,7 +20,9 @@ declare const genRandomNumbers:any;
 
 export class ProductComponent{
     //showDiv=true;
-    rNum = <[]>genRandomNumbers();
+    rNum = <[]>genRandomNumbers().sort(function(x:number,y:number){
+        return x-y
+    });
     page: number = 1;
     itemsToDisplay: number = 10;
 
