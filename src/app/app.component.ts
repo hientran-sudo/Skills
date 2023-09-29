@@ -9,13 +9,13 @@ import { ProductComponent } from './products/product.component';
 export class AppComponent {
   title = 'Skills';
   // -------VIEWCHILD
-  quantity:number = 0;
-  @ViewChild(ProductComponent) product: ProductComponent;
-  ngAfterViewInit(){
-    this.product.childMethod();
-    this.quantity=this.product.instock;
-    console.log(this.quantity);
-  }
+  //quantity:number = 0;
+  //@ViewChild(ProductComponent) product: ProductComponent;
+  //ngAfterViewInit(){
+  //  this.product.childMethod();
+  //  this.quantity=this.product.instock;
+  //  console.log(this.quantity);
+  //}
   // -------PASS DATA FROM CHILD TO PARENT
   //p_addProduct(newProduct:string){
   //  console.log(newProduct);

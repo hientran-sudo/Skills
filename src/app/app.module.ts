@@ -8,6 +8,7 @@ import { ProductComponent } from './products/product.component';
 //import { ProductsFeatureModule } from './products-feature/products-feature.module';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ClassifyPipe } from './classify.pipe';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ClassifyPipe } from './classify.pipe';
     BrowserModule,
     AppRoutingModule,
     //ProductsFeatureModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

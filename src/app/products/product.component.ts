@@ -1,9 +1,15 @@
 import { NgIf } from "@angular/common";
 //import { Component, Input } from "@angular/core";
 //import { Component, Output, EventEmitter } from "@angular/core";
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 declare const genRandomNumbers:any;
-
+interface JSP {
+    userID: string;
+    id:string;
+    title:string;
+    completed:boolean;
+}
 @Component({
     selector: 'app-product',
     template:`<h2>Product List</h2>`,
@@ -25,12 +31,21 @@ declare const genRandomNumbers:any;
    
 })
 
-export class ProductComponent{
-    // -------VIEWCHILD
-    instock:number = 10;
-    childMethod() {
-        console.log('A method in the Product Component - the child');
+export class ProductComponent implements OnInit{
+    constructor(private http:HttpClient){
+
     }
+    ngOnInit(): void {
+        this.http.get<JSP[]>("https://jsonplaceholder.typicode.com/todos").subscribe(data =>{
+            console.log(data);
+        });
+    }
+
+    // -------VIEWCHILD
+    //instock:number = 10;
+    //childMethod() {
+    //    console.log('A method in the Product Component - the child');
+    //}
     // -------PASS DATA FROM CHILD TO PARENT
     //@Output() c_newProductEvent = new EventEmitter<string>();
     //addProduct(value:string){
