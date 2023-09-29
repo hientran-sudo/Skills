@@ -7,12 +7,14 @@ import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './products/product.component';
 //import { ProductsFeatureModule } from './products-feature/products-feature.module';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ClassifyPipe } from './classify.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProductComponent
+    ProductComponent,
+    ClassifyPipe
   ],
   imports: [
     BrowserModule,

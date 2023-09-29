@@ -9,7 +9,7 @@ declare const genRandomNumbers:any;
               // <div>{{rNum}}</div>`,
                `<h2>Product List</h2>
                <div *ngFor="let x of rNum | paginate: {itemsPerPage: itemsToDisplay, currentPage:page}">
-               {{x}}</div>
+               {{x | classify}}</div>
                <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>`,
               //'<li *ngFor="let dept of departments">{{dept}}</li>',
               //'<li *ngFor="let employee of employees">{{employee.name}}</li>',
