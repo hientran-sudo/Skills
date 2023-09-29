@@ -12,7 +12,11 @@ interface JSP {
 }
 @Component({
     selector: 'app-product',
-    template:`<h2>Product List</h2>`,
+    template:
+            `<div id="display" *ngFor="let todo of todos">
+            <div>User ID: {{todo.userID}} ID: {{todo.id}} </div>
+            </div>`,
+            //`<h2>Product List</h2>`,
             //<label>Add new product
             //<input #newProduct></label>
             //<button (click) ="addProduct(newProduct.value)">Add</button>`,
@@ -32,6 +36,7 @@ interface JSP {
 })
 
 export class ProductComponent implements OnInit{
+    todos:JSP[];
     constructor(private http:HttpClient){
 
     }
