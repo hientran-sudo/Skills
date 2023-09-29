@@ -9,6 +9,7 @@ import { ProductComponent } from './products/product.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ClassifyPipe } from './classify.pipe';
 import { HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     //ProductsFeatureModule,
     NgxPaginationModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
