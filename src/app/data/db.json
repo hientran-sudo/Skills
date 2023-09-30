@@ -1,4 +1,10 @@
 {
-    "customers": []
-    
+  "customers": [
+    {
+      "customerName": "Alex",
+      "email": "alex22",
+      "password": "1234",
+      "id": 1
+    }
+  ]
 }
