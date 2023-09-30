@@ -1,10 +1,22 @@
 {
   "customers": [
     {
+      "customerName": "Haley",
+      "email": "haley22",
+      "password": "1234",
+      "id": 2
+    },
+    {
       "customerName": "Alex",
       "email": "alex22",
       "password": "1234",
-      "id": 1
+      "id": 3
+    },
+    {
+      "customerName": "Alex",
+      "email": "alex22",
+      "password": "1234",
+      "id": 4
     }
   ]
 }

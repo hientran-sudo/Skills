@@ -15,7 +15,11 @@ export class HomeComponent implements OnInit {
 
   onSubmit(form: NgForm){
     //console.log(form.value);
-    this.http.post("http://localhost:3000/customers", form.value).subscribe();
+    //this.http.post("http://localhost:3000/customers", form.value).subscribe();
+  }
+
+  deleteDocument(){
+    this.http.delete("http://localhost:3000/customers/1").subscribe();
   }
 
   ngOnInit(): void {
