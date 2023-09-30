@@ -16,7 +16,9 @@ export class HomeComponent implements OnInit {
   data$: Observable<any>;
 
   constructor(private http:HttpClient) {
-    this.data$ = http.get('http://localhost:3000/customers');
+    this.data$ = http.get('http://localhost:3000/customers').pipe(
+      tap(console.log)
+    );
    }
 
   onSubmit(form: NgForm){
@@ -30,6 +32,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.data$.subscribe();
+    this.data$.subscribe();
+
   }
 
 }
