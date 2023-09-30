@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   }
 
   deleteDocument(){
-    this.http.delete("http://localhost:3000/customers/1").subscribe();
+    this.http.delete("http://localhost:3000/customers/4").subscribe();
   }
 
   ngOnInit(): void {
