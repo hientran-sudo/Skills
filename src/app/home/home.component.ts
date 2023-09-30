@@ -17,7 +17,8 @@ export class HomeComponent implements OnInit {
 
   constructor(private http:HttpClient) {
     this.data$ = http.get('http://localhost:3000/customers').pipe(
-      tap(console.log)
+      tap(console.log),
+      shareReplay()
     );
    }
 
