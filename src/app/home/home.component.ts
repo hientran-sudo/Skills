@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { shareReplay, tap } from 'rxjs/operators';
+import { ProfileService } from '../profile.service';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,8 @@ export class HomeComponent implements OnInit {
   email: string;
   password: string;
   data$: Observable<any>;
+
+  public isLoggedIn: boolean=false;
 
   constructor(private http:HttpClient) {
     this.data$ = http.get('http://localhost:3000/customers').pipe(

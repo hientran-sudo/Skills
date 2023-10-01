@@ -8,7 +8,7 @@ export class ProfileService {
   constructor() { }
 
   public loggedInStatus(){
-    this.isLoggedIn = true;
+    this.isLoggedIn = false;
     return this.isLoggedIn;
   }
 }
