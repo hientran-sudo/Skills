@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'product', component: ProductComponent},
   { path: 'merchandise/:id',canActivate: [AuthGuard], component: MerchandiseComponent},
+  { path: 'new', loadChildren: () => import('./new/new.module').then(m => m.NewModule) },
 
 
 ];
