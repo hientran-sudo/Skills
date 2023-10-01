@@ -3,6 +3,7 @@ import { NgIf } from "@angular/common";
 //import { Component, Output, EventEmitter } from "@angular/core";
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { ActivatedRoute } from "@angular/router";
 declare const genRandomNumbers:any;
 interface JSP {
     userID: string;
@@ -13,9 +14,10 @@ interface JSP {
 @Component({
     selector: 'app-product',
     template:
-            `<div id="display" *ngFor="let todo of todos">
-            <div>User ID: {{todo.userID}} ID: {{todo.id}} </div>
-            </div>`,
+            `<div>Product works</div>`,
+            //`<div id="display" *ngFor="let todo of todos">
+            //<div>User ID: {{todo.userID}} ID: {{todo.id}} </div>
+            //</div>`,
             //`<h2>Product List</h2>`,
             //<label>Add new product
             //<input #newProduct></label>
@@ -36,14 +38,18 @@ interface JSP {
 })
 
 export class ProductComponent implements OnInit{
-    todos:JSP[];
-    constructor(private http:HttpClient){
+    //todos:JSP[];
+    //constructor(private http:HttpClient){
+    constructor(private route: ActivatedRoute){
+
 
     }
     ngOnInit(): void {
-        this.http.get<JSP[]>("https://jsonplaceholder.typicode.com/todos").subscribe(data =>{
-            console.log(data);
-        });
+        this.route.params.subscribe(params => console.log(params));
+        // ------------------JSP------------------
+        //this.http.get<JSP[]>("https://jsonplaceholder.typicode.com/todos").subscribe(data =>{
+        //    console.log(data);
+        //});
     }
 
     // -------VIEWCHILD
