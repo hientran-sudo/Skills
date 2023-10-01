@@ -10,13 +10,15 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ClassifyPipe } from './classify.pipe';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MerchandiseComponent } from './merchandise/merchandise.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProductComponent,
-    ClassifyPipe
+    ClassifyPipe,
+    MerchandiseComponent
   ],
   imports: [
     BrowserModule,
