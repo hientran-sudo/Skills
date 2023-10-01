@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './products/product.component';
 import { MerchandiseComponent } from './merchandise/merchandise.component';
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
-  { path: 'merchandise/:id', component: MerchandiseComponent},
-  //{ path: 'product', component:ProductComponent}
+  { path: 'product', component: ProductComponent},
+  { path: 'merchandise/:id',canActivate: [AuthGuard], component: MerchandiseComponent},
+
 
 ];
 
