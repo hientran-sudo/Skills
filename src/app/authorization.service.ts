@@ -8,6 +8,6 @@ export class AuthorizationService {
   constructor() { }
   
   public isAuthorized(){
-    return false;
+    return true;
   }
 }
